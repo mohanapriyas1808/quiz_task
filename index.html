@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    
+    <div id="start-screen">
+      <h1>Welcome to the AdTech Quiz!</h1>
+      <p>This quiz contains <span id="question-count">5</span> questions.</p>
+      <p>Each question will have 15 seconds time to answer</p>
+      <button id="start-btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    
+    <div id="quiz" class="hide">
+      <h2 id="question">Question Text</h2>
+      <h3 id="timer">Time Left: 15s</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><button class="option-btn" onclick="selectAnswer(0)"></button></li>
+        <li><button class="option-btn" onclick="selectAnswer(1)"></button></li>
+        <li><button class="option-btn" onclick="selectAnswer(2)"></button></li>
+        <li><button class="option-btn" onclick="selectAnswer(3)"></button></li>
+      </ul>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result" class="hide">
+      <h2 id="score"></h2>
+      <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
