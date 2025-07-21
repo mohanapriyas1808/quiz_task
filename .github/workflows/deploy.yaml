@@ -46,3 +46,22 @@ jobs:
           docker rm adt-quiz || true
           docker run -d -p 80:80 --name adt-quiz --restart unless-stopped mohanapriya18/adtech-quiz:latest
           EOF
+
+  post-deployment:
+    runs-on: ubuntu-latest
+    needs: deploy
+
+    steps:
+      - name: 📣 Notify Slack - Deployment Success
+        if: success()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"✅ Deployment to EC2 was successful!"}' \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: ❌ Notify Slack - Deployment Failed
+        if: failure()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"❌ Deployment to EC2 failed!"}' \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
