@@ -1,4 +1,14 @@
 const quizData = [
+   {
+    question: "What does Advertising Technology (AdTech) primarily refer to?",
+    options: [
+      "The manual process of buying and selling ad space in traditional media",
+      "Software and tools used to create, run, manage, measure, and optimize digital advertising campaigns",
+      "Companies that exclusively deal with offline advertising campaigns",
+      "A financial model for calculating ad agency commission"
+    ],
+    answer: 1
+  },
   {
     question: "What is a Landing Page?",
     options: [
@@ -10,45 +20,35 @@ const quizData = [
     answer: 0
   },
   {
-    question: "What does HTML stand for?",
+    question: "According to The AdTech Book, what is the primary goal of an advertiser?",
     options: [
-      "Hyper Trainer Marking Language",
-      "Hyper Text Marketing Language",
-      "Hyper Text Markup Language",
-      "High Text Machine Language"
+      "To develop new content for online publications",
+      "To provide technical support for advertising platforms",
+      "To get products or services in front of a target audience to build brand awareness, develop brand loyalty, and increase sales",
+      "To manage the technical infrastructure of ad servers"
     ],
     answer: 2
   },
   {
-    question: "Which language is used for styling web pages?",
+    question: " In the context of digital advertising, what best defines a publisher?",
     options: [
-      "HTML",
-      "JQuery",
-      "CSS",
-      "XML"
+      "A brand or company that buys ad space",
+      "A company that develops advertising technology",
+      "Any company that produces content that attracts an audience",
+      "An organization responsible for setting ad industry standards"
     ],
     answer: 2
   },
   {
-    question: "Which is not a JavaScript Framework?",
+    question: "What is ad space in the context of digital advertising?",
     options: [
-      "Python Script",
-      "JQuery",
-      "Django",
-      "NodeJS"
+       "The software and tools used to create, run, manage, measure, and optimize digital advertising campaigns",
+       "The financial model that dictates the cost for one thousand ad views",
+       "The file containing the actual advertisement that the user is exposed to",
+       "The available area on a publisher's website or app that is filled with advertisements"
     ],
-    answer: 2
+    answer: 3
   },
-  {
-    question: "What does CSS stand for?",
-    options: [
-      "Cascading Style Sheets",
-      "Colorful Style Sheets",
-      "Computer Style Sheets",
-      "Creative Style Sheets"
-    ],
-    answer: 0
-  }
 ];
 
 let currentQuestion = 0;
